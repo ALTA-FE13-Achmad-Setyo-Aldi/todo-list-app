@@ -52,32 +52,33 @@ const TodoItem: React.FC<TodoItemProps> = ({ todo, onDelete, onUpdate }) => {
       {isEditing ? (
         <form onSubmit={handleSubmit} className="gap-4">
           <input
-            className="input input-primary input-bordered input-xs w-full max-w-xs bg-white"
+            className="input input-primary input-bordered input-xs w-full max-w-xs bg-white h-10"
             type="text"
             value={content}
             onChange={handleTitleChange}
           />
-
-          <label>
-            <input
-              className="ml-2
-            mr-2"
-              type="checkbox"
-              checked={completed}
-              onChange={handleCompletedChange}
-            />
-            Completed
-          </label>
-          <button className="mr-2 ml-2 btn btn-xs btn-primary" type="submit">
-            Save
-          </button>
-          <button
-            className="btn btn-xs btn-danger"
-            type="button"
-            onClick={handleCancel}
-          >
-            Cancel
-          </button>
+          <div className="py-4">
+            <label>
+              <input
+                className="ml-2
+            mr-2 py-1.5"
+                type="checkbox"
+                checked={completed}
+                onChange={handleCompletedChange}
+              />
+              Completed
+            </label>
+            <button className="mr-2 ml-2 btn btn-xs btn-primary" type="submit">
+              Save
+            </button>
+            <button
+              className="btn btn-xs btn-danger"
+              type="button"
+              onClick={handleCancel}
+            >
+              Cancel
+            </button>
+          </div>
         </form>
       ) : (
         <div className="flex flex-col justify-center gap-2">
