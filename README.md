@@ -1,2 +1,3 @@
 # todo-list-app
-vercel = *still trying to deploy
+
+vercel = https://my-todo-app-v2.vercel.app/
